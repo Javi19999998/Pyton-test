@@ -53,4 +53,37 @@ Seleccione una opción:
                         print("Opción inválida. Intente nuevamente.")
 
             case 3:
-                
+                if not carrito:
+                    print("\nNo hay productos en el carrito.")
+                    continue
+
+                print("\n--- BOLETA ---")
+                if nombre:
+                    print("Gracias por tu compra", nombre "!")
+                else:
+                    print("Gracias por tu compra!")
+
+                total_neto = 0
+                for item in carrito:
+                    print(f"{item[0]} - ${item[1]}")
+                    total_neto += item[1]
+
+                cantidad = len(carrito)
+                iva = int(total_neto * 0.19)
+                total_final = total_neto + iva
+
+                print("\nCantidad de artículos: ", cantidad)
+                print("Precio neto: $",total_neto)
+                print("IVA (19%): $",iva)
+                print("Total a pagar: $",total_final)
+                print("---------------")
+
+            case 4:
+                print("Gracias por usar el sistema. ¡Hasta luego!")
+                break
+
+            case _:
+                print("Opción inválida. Intente nuevamente.")
+    
+    except ValueError:
+        print("Por favor ingrese un número válido.")
