@@ -23,7 +23,7 @@ Seleccione una opción:
         match op:
             case 1:
                 nombre = input("Ingrese su nombre: ")
-                print(f"\nHola {nombre}, bienvenido al carrito de compras.")
+                print(" Hola", nombre, "bienvenido al carrito de compras.")
 
             case 2:
                 while True:
