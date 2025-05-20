@@ -3,8 +3,12 @@ while True:
     try:
         perros=int(input("Indique la cantidad de perros que participaran: "))
         cuota=random.randint(2,7)
+        #while perros<=1:
+          #  print("La cantidad de perros debe ser mayor a 1")
+         #   perros=int(input("Indique la cantidad de perros que participaran: "))
+        #cuota=4
         cumple=0
-        # no_cumple=0
+        no_cumple=0
         print("La cuota minima de conejos es", cuota)
 
         for p in range(perros):
@@ -19,4 +23,3 @@ while True:
         print("El total de perros que cumple la cuota fue", perros-cumple)
     except Exception:
         print("Solo debe poner numeros enteros")
-        
