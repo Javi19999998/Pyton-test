@@ -71,6 +71,7 @@ if codDescuento == "soyotaku":
     print("Aplica el Descuento")
     desc=total*0.1
     total=total-desc
+    print("Su descuento es ", desc)
 else:
     print("No aplica descuento")
 
