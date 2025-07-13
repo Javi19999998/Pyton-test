@@ -24,9 +24,9 @@ def menu():
                 print("Saliendo...")
             else:
                 print("Ingrese opcion del 1 al 4")
-                break
         except Exception:
             print("Opcion invalida")
+            break
 
 def inscribir_alumno():
     print("Para inscribirse se necesitan los siguientes datos: ")
@@ -59,17 +59,23 @@ def validar_codigo(codigo):
         return False
 
 def consultar_inscripcion():
-    nombre = input("Ingrese el nombre del alumno a consultar")
-    if nombre in inscripciones:
-        print("Curso:", inscripciones[nombre]["curso"])
-        print("Código:", inscripciones[nombre]["codigo"])
+    while True:
+        nombre = input("Ingrese el nombre del alumno a consultar: ")
+        if nombre in inscripciones:
+            print("Curso:", inscripciones[nombre]["curso"])
+            print("Código:", inscripciones[nombre]["codigo"])
+            break
+        else:
+            print("Nombre no encontrado, ingrese nuevamente")
 
 def cancelar_inscripcion():
-    nombre = input("Ingrese el nombre del alumno a cancelar: ")
-    if nombre in inscripciones:
-        del inscripciones[nombre]
-        print("Inscripcion eliminada correctamete!")
-    else:
-        print("Ingrese nombre valido")
+    while True:
+        nombre = input("Ingrese el nombre del alumno a cancelar: ")
+        if nombre in inscripciones:
+            del inscripciones[nombre]
+            print("Inscripcion eliminada correctamete!")
+            break
+        else:
+            print("Ingrese nombre valido")
 
 menu()
